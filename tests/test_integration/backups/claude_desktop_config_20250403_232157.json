@@ -1,0 +1,19 @@
+{
+  "mcp_servers": [
+    {
+      "name": "테스트 서버",
+      "description": "테스트용 MCP 서버",
+      "installation_options": [
+        "npm"
+      ],
+      "env_vars": [
+        "API_KEY"
+      ],
+      "args": [
+        "--port"
+      ],
+      "category": "search",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "mcp_servers": [
+    {
+      "name": "테스트 서버 2",
+      "description": "테스트용 MCP 서버 2",
+      "installation_options": [
+        "uvx"
+      ],
+      "env_vars": [
+        "SECRET_KEY"
+      ],
+      "args": [
+        "--debug"
+      ],
+      "category": "vision",
+      "enabled": true
+    },
+    {
+      "name": "테스트 서버 1",
+      "description": "업데이트된 설명",
+      "installation_options": [
+        "npm",
+        "docker"
+      ],
+      "env_vars": [
+        "API_KEY",
+        "SERVER_URL"
+      ],
+      "args": [
+        "--port",
+        "--verbose"
+      ],
+      "category": "search",
+      "enabled": true
+    }
+  ]
+}
