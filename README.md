@@ -1,93 +1,96 @@
-# MCP 설정 관리자 (MCP Config Manager)
+# MCP Config Manager
 
-MCP 설정 관리자는 Claude Desktop의 MCP(Model Context Protocol) 서버 설정을 관리하는 도구입니다.
+*Read this in [Korean](README.ko.md)*
 
-## 기능
+MCP Config Manager is a tool for managing MCP (Model Context Protocol) server settings for Claude Desktop.
 
-- GitHub에서 MCP 서버 목록 자동 크롤링
-- 설치된 MCP 서버 관리
-- 설정 파일 백업 및 복원
-- 크로스 플랫폼 지원 (Windows, macOS, Linux)
-- Claude Desktop 설정 파일 경로 직접 지정 가능
+## Features
 
-## 설치 방법
+- Automatic crawling of MCP server list from GitHub
+- Management of installed MCP servers
+- Configuration file backup and restore
+- Cross-platform support (Windows, macOS, Linux)
+- Direct specification of Claude Desktop configuration file path
 
-### 빌드된 패키지 설치
+## Installation
+
+### Pre-built Packages
 
 #### Windows
 
-1. `MCP_Config_Manager_Setup.exe` 파일을 다운로드합니다.
-2. 설치 프로그램을 실행하고 안내에 따라 설치합니다.
+1. Download the `MCP_Config_Manager_Setup.exe` file.
+2. Run the installer and follow the instructions.
 
 #### macOS
 
-1. `MCP_Config_Manager.dmg` 파일을 다운로드합니다.
-2. DMG 파일을 열고 애플리케이션을 Applications 폴더로 드래그합니다.
+1. Download the `MCP_Config_Manager.dmg` file.
+2. Open the DMG file and drag the application to the Applications folder.
+3. Note: If you see an "unidentified developer" warning, right-click the app and select "Open".
 
 #### Linux
 
-1. `MCP_Config_Manager.AppImage` 파일을 다운로드합니다.
-2. 파일에 실행 권한을 부여합니다: `chmod +x MCP_Config_Manager.AppImage`
-3. 애플리케이션을 실행합니다: `./MCP_Config_Manager.AppImage`
+1. Download the `MCP_Config_Manager.AppImage` file.
+2. Grant execution permissions: `chmod +x MCP_Config_Manager.AppImage`
+3. Run the application: `./MCP_Config_Manager.AppImage`
 
-### GitHub에서 소스코드로 실행
+### Running from Source Code
 
-1. 저장소 클론:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/사용자명/MCP-Manager.git
-   cd MCP-Manager
+   git clone https://github.com/darkdarkcocoa/mcp-manager.git
+   cd mcp-manager
    ```
 
-2. 가상 환경 설정 (선택 사항이지만 권장):
+2. Set up a virtual environment (optional but recommended):
    ```bash
    python -m venv venv
    
-   # Windows에서 활성화
+   # Activate on Windows
    venv\Scripts\activate
    
-   # macOS/Linux에서 활성화
+   # Activate on macOS/Linux
    source venv/bin/activate
    ```
 
-3. 필요한 라이브러리 설치:
+3. Install required libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. 애플리케이션 실행:
+4. Run the application:
    ```bash
    python main.py
    ```
 
-## 사용 방법
+## Usage
 
-### 설정 파일 경로 설정
+### Setting the Configuration File Path
 
-처음 실행 시 Claude Desktop 설정 파일 경로를 찾을 수 없으면 직접 Claude Desktop 설치 폴더를 지정할 수 있습니다.
+If the Claude Desktop configuration file path cannot be found on first run, you can specify the Claude Desktop installation folder directly.
 * Windows: `%APPDATA%/Claude`
 * macOS: `~/Library/Application Support/Claude`
 * Linux: `~/.config/Claude`
 
-이후에도 "내 MCP" 탭에서 "경로 변경" 버튼을 통해 설정 파일 경로를 변경할 수 있습니다.
+You can also change the configuration file path later via the "Change Path" button in the "My MCP" tab.
 
-### MCP 서버 관리
+### Managing MCP Servers
 
-1. MCP 설정 관리자를 실행합니다.
-2. "사용 가능한 MCP" 탭에서 원하는 MCP 서버를 선택합니다.
-3. 필요한 설정을 입력하고 "적용" 버튼을 클릭합니다.
-4. "내 MCP" 탭에서 설치된 MCP 서버를 관리합니다.
-5. 변경 사항을 저장하면 Claude Desktop이 재시작됩니다.
+1. Run the MCP Config Manager.
+2. Select the desired MCP server from the "Available MCPs" tab.
+3. Enter the required settings and click the "Apply" button.
+4. Manage installed MCP servers in the "My MCP" tab.
+5. When you save changes, Claude Desktop will restart.
 
-## 개발자 정보
+## Developer Information
 
-- 개발 언어: Python
-- 사용 라이브러리: PyQt6, Requests, BeautifulSoup4, Markdown
+- Development language: Python
+- Libraries used: PyQt6, Requests, BeautifulSoup4, Markdown
 
-## 개발 환경 설정
+## Development Setup
 
-### 개발 의존성
+### Dependencies
 
-프로젝트 개발에 필요한 패키지:
+Packages required for project development:
 ```
 PyQt6>=6.0.0
 requests>=2.25.0
@@ -95,12 +98,12 @@ beautifulsoup4>=4.9.0
 markdown>=3.3.0
 ```
 
-### 개발 및 기여
+### Development and Contributing
 
-1. 이슈 및 기능 요청은 GitHub 이슈를 통해 제출해주세요.
-2. 코드 기여는 Pull Request를 통해 제출해주세요.
-3. 코드 작성 시 PEP 8 스타일 가이드를 따라주세요.
+1. Submit issues and feature requests through GitHub Issues.
+2. Submit code contributions through Pull Requests.
+3. Follow the PEP 8 style guide when writing code.
 
-## 라이센스
+## License
 
 MIT License
